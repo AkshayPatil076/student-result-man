@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(54, 54, 54);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.navbar-brand{
+    font-size: 0.8cm;
+    font-family: Arial black;
+    position: relative;
+    left: 16cm;
+    
+}
+.navbar-nav{
+    position: relative;
+    left: 5cm;
+}
+.nav-item{
+    width: 5cm;
+}
+.form1{
+    background-color: rgb(36, 36, 36);
+    width: 15cm;
+    height: 10cm;
+    border-radius: 30px;
+    margin: 5cm;
+    position: relative;
+    bottom: 1cm;
+    left: 7cm;
+}
+.form-floating{
+    padding: 5px;
+    margin: 1cm;
+    position: relative;
+    left: 1.2cm;
+    top: 1cm;
+}
+.form-control{
+    width: 10cm;
+}
+.btn{
+    width: 5cm;
+    height: 1.5cm;
+    font-family: Arial black;
+    font-size: 0.5cm;
+    position: relative;
+    left: 2cm;
+}

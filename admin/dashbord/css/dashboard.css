@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+body{
+    background-color: rgb(54, 54, 54);
+}
+.navbar-brand{
+  font-size: 1cm;
+  font-family: Arial black;
+}
+.navbar-nav{
+    position: relative;
+    left: 5cm;
+}
+.nav-link{
+    width: 4cm;
+}
+.btn-danger{
+    position: relative;
+    right: 5cm;
+    /* left: 50cm; */
+    width: 4cm;
+}
+.form11{
+    margin: 1cm;
+}
+
+#createclass{
+    background-color: rgb(0, 0, 0);
+    width: 15cm;
+    height: 10cm;
+    border-radius: 30px;
+    margin: 5cm;
+    position: relative;
+    display: none;
+    left: 13cm;
+}
+#create_class{
+    color: white;
+    position: relative;
+    right: 19cm;
+    display: none;
+}
+
+
+.men11{
+    color: white;
+    position: relative;
+    display: flex;
+    right: 9cm;
+}
+.m1{
+    /* font-size: 0cm; */
+    display: flex;
+    width: 5cm;
+}
+.m11{
+    font-size: 0.6cm;
+    position: relative;
+    top: 5px;
+    /* left: 1cm; */
+}
+.m11:hover{
+    color: rgb(255, 166, 0);
+}
+.col{
+    color: rgb(255, 166, 0);
+}
+.borderbox{
+    background-color: rgb(41, 41, 41);
+    width: 15cm;
+    min-height: 15cm;
+    bottom: 2cm;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 255, 255);
+    
+    margin: 3cm;
+    position: relative;
+    left: 9cm;
+}
+.das1{
+    display: flex;
+    color: white;
+    padding: 1cm;
+    font-size: 0.5cm;
+    font-family: Arial black;
+    position: relative;
+    left: 1cm;
+}
+.bas{
+    position: relative;
+    top: 2cm;
+}
