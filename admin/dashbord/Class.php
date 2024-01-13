@@ -1,6 +1,48 @@
+<?php
+ini_set('display_errors','Off');
+    $host = "localhost";
+    $user="root";
+    $password = "";
+    $DB="sms2024";
+
+    $conn = mysqli_connect($host,$user,$password,$DB);
+
+    if(!$conn){
+        die("Connection Error".mysqli_connect_error());
+    }
+
+        $year=$_POST['year'];
+        $class=$_POST['class'];
+
+        $sql = "SELECT * FROM class WHERE year = '$year' AND class = '$class'";
+        $result = $conn->query($sql);
+     
+        if ($result->num_rows == 1) {
+            // Login successful
+            $_SESSION["year"] = $year;
+            $_SERVER['class']=$class;
+            // echo "<script>alert('Sucess User ')</script>";
+            
+            echo "<i class='col12'>This Calss is avalabe</i> ";
+        } 
+        else {
+            $sql="INSERT INTO class (`year`,`class`) VALUE ('$year','$class')";
+            $res=mysqli_query($conn,$sql);
+            //  echo "<script>alert('Invalid User ')</script>";
+            // header("Location:  admin.php");
+        }
+
+      ?>
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      .col12{
+        color:red;
+        /* background-color:red; */
+        /* width: 50cm; */
+      }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -35,26 +77,26 @@
   </script>
  <!-- *****************************************************navbar end /******************************************************************************** -->
  <div class="form">
-  <form action="">
+  <form action=""  method="POST">
     <ul class="f1">
       <li class="f11">
         <div class="input-group">
           <span class="input-group-text">Enter Year </span>
-          <input type="text" aria-label="First name" class="form-control">
+          <input type="text" aria-label="First name" class="form-control" name="year" required>
           <!-- <input type="text" aria-label="Last name" class="form-control"> -->
         </div>
       </li>
         <li class="f11">
           <div class="input-group">
             <span class="input-group-text">Enter Class </span>
-            <input type="text" aria-label="First name" class="form-control">
+            <input type="text" aria-label="First name" class="form-control" name="class" required>
             <!-- <input type="text" aria-label="Last name" class="form-control"> -->
           </div>
         </li>
 
       </li>
       <li class="f11">
-        <button type="button" class="btn btn-primary ad">Submit</button>
+        <button type="submit" class="btn btn-primary ad" name="submit">Submit</button>
       </li>
      </ul>
   </form>
