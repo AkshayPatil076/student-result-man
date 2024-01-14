@@ -1,4 +1,30 @@
+<?php
+ini_set('display_errors','Off');
+$host = "localhost";
+$user="root";
+$password = "";
+$DB="sms2024";
 
+$conn = mysqli_connect($host,$user,$password,$DB);
+
+if(!$conn){
+    die("Connection Error".mysqli_connect_error());
+}
+
+// $sql = "SELECT COUNT(*) as class FROM student";
+// $result = $conn->query($sql);
+
+// if ($result->num_rows > 0) {
+//     // Output data of each row
+//     $row = $result->fetch_assoc();
+//     echo "Number of Student " . $row["class"];
+// } else {
+//     echo "No users found in the student table";
+// }
+
+// Close connection
+// $conn->close();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,9 +64,42 @@
  <!-- *****************************************************navbar end /******************************************************************************** -->
     <div class="borderbox">
      <ul class="bas">
-      <li class="das1 "> Number of Class : </li>
-      <li class="das1 "> Number of Student : </li>
-      <li class="das1 "> Number of Result : </li>
+      <li class="das1 "> Number of Class :<?php
+      $sql = "SELECT COUNT(*) as class FROM class";
+      $result = $conn->query($sql);
+      
+      if ($result->num_rows > 0) {
+          // Output data of each row
+          $row = $result->fetch_assoc();
+          echo " " . $row["class"];
+      } else {
+          echo "No users found in the student table";
+      }
+      ?> </li>
+      <li class="das1 "> Number of Student :<?php
+      $sql = "SELECT COUNT(*) as class FROM student";
+      $result = $conn->query($sql);
+      
+      if ($result->num_rows > 0) {
+          // Output data of each row
+          $row = $result->fetch_assoc();
+          echo " " . $row["class"];
+      } else {
+          echo "No users found in the student table";
+      }
+      ?> </li>
+      <li class="das1 "> Number of Result : <?php
+      $sql = "SELECT COUNT(*) as roll FROM result";
+      $result = $conn->query($sql);
+      
+      if ($result->num_rows > 0) {
+          // Output data of each row
+          $row = $result->fetch_assoc();
+          echo " " . $row["roll"];
+      } else {
+          echo "No users found in the student table";
+      }
+      ?></li>
      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
