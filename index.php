@@ -38,7 +38,7 @@ if(!$conn){
     <!-- ****************************navbar end ******************************************************************* -->
     <!-- *************************************Form **************************************************************************** -->
     <div class="form">
-  <form action="./studentresult.php"  method="POST">
+  <form action="studentresult.php"  method="POST">
     <ul class="f1">
     <li class="f11">
       <?php
