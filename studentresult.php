@@ -48,7 +48,40 @@
                 while($rows = mysqli_fetch_assoc($res2) ){
                       ?>
 
-                    
+                        <table style="float:right">
+                          <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                          </tr>
+                          <tr>
+                            <td>PHP</td>
+                            <td><?php  echo $rows['s1'];?></td>
+                          </tr>
+                          <tr>
+                            <td>Python Programming</td>
+                            <td><?php  echo $rows['s2'];?></td>
+                          </tr>
+                          <tr>
+                            <td>JAVA Programming</td>
+                            <td><?php  echo $rows['s3'];?></td>
+                          </tr>
+                          <tr>
+                            <td>R Programming</td>
+                            <td><?php  echo $rows['s4'];?></td>
+                          </tr>
+                          <tr>
+                            <td>MysQL DB</td>
+                            <td><?php  echo $rows['s5'];?></td>
+                          </tr>
+                          <tr>
+                            <td>Web Development</td>
+                            <td><?php  echo $rows['s6'];?></td>
+                          </tr>
+                          <tr>
+                            <td>SoftwareDevelopmen</td>
+                            <td><?php  echo $rows['s7'];?></td>
+                          </tr>
+                        </table>
 
 
 <?php
